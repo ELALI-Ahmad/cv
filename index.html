@@ -54,25 +54,33 @@
             </div>
 
             <div class="card--techstack">
-                <span>React</span>
+                <span>CSS</span>
             </div>
             
-            <div class="card--techstack">
-                <span>C, C++ & C#</span>
-            </div>
-
             <div class="card--techstack">
                 <span>JavaScript</span>
             </div>
 
             <div class="card--techstack">
-                <span>CSS</span>
+                <span>React</span>
             </div>
 
             <div class="card--techstack">
                 <span>Git</span>
             </div>
 
+            <div class="card--techstack">
+                <span>php</span>
+            </div>
+
+            <div class="card--techstack">
+                <span>SQL</span>
+            </div>
+
+            <div class="card--techstack">
+                <span>C, C++ & C#</span>
+            </div>
+            
         </div>
 
     </section>
@@ -201,18 +209,57 @@
         <!-- 1 -->
         <div class="line-break"></div>
         <div class="card--work-history" >
-            <strong>Certificat Professionnelle - Developpement Front End</strong> 
+            <strong>Certificat Professionnelle - Développement Front End</strong> 
             <p>Meta - avril 2023 - août 2023</p>
+
+            <button class="show-courses">Voir les Cours</button>
+            <ul class="courses-list hidden-courses">
+                <li>Introduction au Développement Front-End <a href="assets/certificates/introduction to Front End Dev.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>Introduction au Développement Back-End <a href="assets/certificates/introduction to Back End Dev.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>HTML and CSS en profondeur <a href="assets/certificates/HTML & CSS.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>Programmation avec JavaScript <a href="assets/certificates/JavaScript.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>Base de React <a href="assets/certificates/React Basics.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>React avancé <a href="assets/certificates/Advanced React.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>Version Control – GIT <a href="assets/certificates/version control.pdf" target="_blank">Télécharger le Certificat</a></li>
+                <li>Principes de conception UX/U <a href=# target="_blank">Certificat en cours</a></li>
+                <li>APIs <a href=# target="_blank">Certificat en cours</a></li>
+                <li>AngularJS pour débutant <a href=# target="_blank">Certificat en cours</a></li>
+            </ul>
+
+        </div>
+        
+        <!-- 2 -->
+        <div class="line-break"></div>
+        <div class="card--work-history" >
+            <strong>Spécialisation - Web Applications</strong> 
+            <p>Université de Michigan - avril 2023 - Septembre 2023</p>
+
+            <button class="show-courses">Voir les Cours</button>
+            <ul class="courses-list hidden-courses">
+                <li>Créer des applications Web en PHP <a href=# target="_blank">Certificat en cours</a></li>
+                <li>Introduction au Structured Query Language (SQL) <a href=# target="_blank">Certificat en cours</a></li>
+                <li>Building Database Applications in PHP <a href=# target="_blank">Certificat en cours</a></li>
+                <li>JavaScript, jQuery, and JSON <a href=# target="_blank">Certificat en cours</a></li>
+            </ul>
+
         </div>
 
-        <!-- 2 -->
+        <!-- Modal for "Certificat en cours" -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Ce cours n'est pas encore terminé. Le certificat sera disponible une fois qu'il sera terminé.</p>
+            </div>
+        </div>
+
+        <!-- 3 -->
         <div class="line-break"></div>
         <div class="card--work-history">
             <strong>Master - Système d'Énergie Électrique - Automatique et Informatique Industrielle</strong>
             <p>ENSEEIHT - 2016 - 2018</p>
         </div>
 
-        <!-- 3 -->
+        <!-- 4 -->
         <div class="line-break"></div>
         <div class="card--work-history">
             <strong>Licence - Génie Mécatronique</strong>
@@ -285,63 +332,27 @@
                     </div>
                 </div>
             </a>
+            <a href="https://elali-ahmad.github.io/Project-7/" target="_blank" class="flip-card"> <!-- Project 6 -->
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3 class="title">Portfolio</h3>
+                        <h4>React JS</h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3 class="title">React Portfolio</h3>
+                        <h4>Cliquez pour accéder au site</h4>
+                    </div>
+                </div>
+            </a>
         </div>
+</div>
        
 
     </section>
 
 </div>
 
-<script>
-    // Your JavaScript code here
-    // For example, you can add the dark mode functionality directly
-
-    const checkbox = document.getElementById('checkbox');
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        document.body.classList.add('dark-mode');
-      } else {
-        document.body.classList.remove('dark-mode');
-      }
-    });
-
-// check BOX
-
-document.addEventListener("DOMContentLoaded", function () {
-  const webDevCheckbox = document.getElementById("webDevCheckbox");
-  const industrialCheckbox = document.getElementById("industrialCheckbox");
-  const webDevelopmentExp = document.getElementById("webDevelopmentExp");
-  const industrialExp = document.getElementById("industrialExp");
-
-  function updateContent() {
-    const webDevChecked = webDevCheckbox.checked;
-    const industrialChecked = industrialCheckbox.checked;
-
-    if (webDevChecked && !industrialChecked) {
-      webDevelopmentExp.classList.remove("hidden");
-      industrialExp.classList.add("hidden");
-    } else if (!webDevChecked && industrialChecked) {
-      webDevelopmentExp.classList.add("hidden");
-      industrialExp.classList.remove("hidden");
-    } else if (webDevChecked && industrialChecked) {
-      webDevelopmentExp.classList.remove("hidden");
-      industrialExp.classList.remove("hidden");
-    } else {
-      webDevelopmentExp.classList.add("hidden");
-      industrialExp.classList.add("hidden");
-    }
-  }
-
-  // Initially, show web development experiences and check the first checkbox
-  webDevCheckbox.checked = true;
-  updateContent();
-
-  webDevCheckbox.addEventListener("change", updateContent);
-  industrialCheckbox.addEventListener("change", updateContent);
-});
-
-
-  </script>
+<script src="action.js"></script>
 
 </body>
 </html>
