@@ -204,7 +204,9 @@ li{
        rgb(82, 82, 82) 40%, rgba(174, 174, 174, 0.603) 48%);
     color: rgb(0, 0, 0);
   }
-  
+
+
+
   .flip-card-back {
     background: linear-gradient(
       120deg, rgb(172, 172, 172) 30%,
