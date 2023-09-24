@@ -6,354 +6,650 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmad EL ALI</title>
     <link rel="stylesheet" href="./styles/main.css" media="screen" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+<div class="version">
+    <label class="rocker rocker-small">
+        <input type="checkbox" id="languageToggle">
+        <span class="switch-left">Eng</span>
+        <span class="switch-right">Fr</span>
+    </label>     
+</div>
+
+<div class="french-content">
     
-<div id="container--main">
- 
-    <!-- Bio -->
-    <section id="wrapper--hero" class="section--page">
-        <img id="profile-pic" src="./assets/images/photoID.png" alt="ID photo">
+    <div class="nav-bar">
+        <nav>
+            <ul>
+              <li><a href="#wrapper--hero">Bio</a></li>
+              <li><a href="#competences-techniques">Skills</a></li>
+              <li><a href="#points-forts">Points (+)</a></li>
+              <li><a href="#Experiences-section">Experiences</a></li>
+              <li><a href="#formations-section">Educations</a></li>
+            </ul>
+        </nav>   
+    </div>
 
-        <div>
+    <div id="container--main">
+    
+        <!-- Bio -->
+        <section id="wrapper--hero" class="section--page">
+            <img id="profile-pic" src="./assets/images/photoID.png" alt="ID photo">
 
-            <div class="namenswitch">
-                <h1 id="user-name">Ahmad EL ALI</h1>
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox" class="switch">
-                <div class="powersign"></div>
-                </label>
+            <div>
+
+                <div class="namenswitch">
+                    <h1 id="user-name">Ahmad EL ALI</h1>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" class="switch">
+                    <div class="powersign"></div>
+                    </label>
+                </div>
+                <h2>Chef de Projets</h2>
+                <p id="bio">
+                    <i>Doté de 5 années d'expérience dans le domaine professionnel, je suis
+                    déterminé à mettre en œuvre mes compétences en gestion d'affaires,
+                    en planification stratégique et en relations interpersonnelles pour
+                    contribuer au succès de vos projets. Mon objectif à moyen terme est
+                    de prendre en charge la responsabilité d'une division, tout en
+                    continuant à apporter une valeur ajoutée à votre entreprise.</i>
+                </p>
+                <p id="email">e-mail: elali.ahm@gmail.com</p>
+                <p id="phone">Tel: 07 84 96 80 06</p>
+
             </div>
-            <p id="bio">Mes expériences variées dans différents domaines m’ont permis d’acquérir des compétences en programmation, en gestion de projet, en résolution de problèmes et en communication interne et externe tout au long de ma carrière.
-            </p>
-            <p id="email">e-mail: elali.ahm@gmail.com</p>
-            <p id="phone">Tel: 07 84 96 80 06</p>
-
-        </div>
-    </section>
+        </section>
 
 
-    <!-- liens -->
-    <section class="section--page">
-        <div id="socials--list">
-            <strong><a href="https://www.github.com/ELALI-Ahmad" target="_blank">Github</a></strong>
-            <strong><a href="https://www.linkedin.com/in/ahmad-el-ali/" target="_blank">linkedin</a></strong>
-            <strong><a href="./assets/CV Ahmad EL ALI.pdf" target="_blank">Download CV</a></strong>
-        </div>
-    </section>
+        <!-- liens -->
+        <section id="liens" class="section--page">
+            <div id="socials--list">
+                <!-- <strong><a href="https://www.github.com/ELALI-Ahmad" target="_blank">Github</a></strong> -->
+                <strong><a href="https://www.linkedin.com/in/ahmad-el-ali/" target="_blank">linkedin</a></strong>
+                <!-- <strong><a href="./assets/CV Ahmad EL ALI Fr.pdf" target="_blank">Download CV</a></strong> -->
+                <!-- <strong><a href="./assets/CV Ahmad EL ALI Eng.pdf" target="_blank">linkedin</a></strong> -->
+                <strong>
+                    <a href="#" id="downloadLink" onclick="showLanguageButtons();">Download CV</a>
+                    <div id="languageButtons" style="display: none;">
+                    <button class="simple-btn" onclick="downloadCV('French')">CV Français</button>
+                    <button class="simple-btn" onclick="downloadCV('English')">English CV</button>
+                    </div>
+                </strong>
+            </div>
+        </section>
 
 
-    <!-- Compétences Techniques -->
-    <section class="section--page">
-        <h2>Compétences Techniques</h2>
-        
-        <div id="wrapper--techstack__items">
+        <!-- Compétences -->
+        <section id="competences-techniques" class="section--page">
+            <h2>Compétences</h2>
             
-            <div class="card--techstack">
-                <span>HTML</span>
+            <div id="wrapper--techstack__items">
+                
+                <div class="card--techstack">
+                    <span>Planification Stratégique</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Gestion d'Équipe</span>
+                </div>
+                
+                <div class="card--techstack">
+                    <span>Suivi et Contrôle</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Gestion des Risques</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Communication</span>
+                </div>
+
+                <div class="card--techstack">
+                    <span>Gestion du Budget</span>
+                </div>
+                
             </div>
 
-            <div class="card--techstack">
-                <span>CSS</span>
-            </div>
+        </section>
+
+        <!-- Points Forts -->
+        <section id="points-forts" class="section--page">
+            <h2>Points Forts</h2>
+            <ul id="qualification--list">
+                <li>Capacité à gérer et à <strong>coordonner des équipes</strong> pour atteindre des objectifs spécifiques.</li>
+                <li>Compétences en <strong>communication</strong> pour travailler avec des équipes interfonctionnelles.</li>
+                <li>Capacité à <strong>évaluer les risques</strong> et à élaborer des plans d'action pour les gérer efficacement</li>
+                <li>Capacité à <strong>gérer des budgets</strong> et à suivre les coûts du projet</li>
+                <li>Capacité à élaborer des stratégies de croissance et à mettre en œuvre des <strong>plans d'exécution</strong>.</li>
+                <li>Gestion experte de la <strong>facturation client</strong>, assurant la précision et le suivi efficace des paiements.</li>
+            </ul>
+        </section>
+
+
+        <!-- Experiences Professionnelles -->
+        <h2 id="Experiences-section">Expériences Professionnelles</h2>
+
+        <section id="work-history-wrapper" class="section--page">
+
             
-            <div class="card--techstack">
-                <span>JavaScript</span>
-            </div>
+            <section id="industrialExp">
 
-            <div class="card--techstack">
-                <span>React</span>
-            </div>
+                <!-- 1 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card1">
+                    <strong>Chef de Projet - ALFA LAVAL</strong>
+                    <p>fev 2022 - Présent</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card1', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Gestion de projets variés.</li>
+                        <li>Suivi complet et efficace des projets de bout en bout.</li>
+                        <li>Collaboration étroite avec les équipes d'usines internationales.</li>
+                        <li>Expertise en réglementations et normes industrielles.</li>
+                        <li>Supervision de budgets dépassant 20 millions d'euros.</li>
+                        <li>Formation de nouveaux employés pour renforcer l'équipe.</li>
+                    </ul>
+                </div>
+                
 
-            <div class="card--techstack">
-                <span>Git</span>
-            </div>
+                <!-- 2 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card2">
+                    <strong>Responsable des travaux - Equans</strong>
+                    <p>dec 2020 – dec 2021</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card2', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Formation de nouveaux employés pour renforcer l'équipe.</li>
+                        <li>Conception et planification précises.</li>
+                        <li>Coordination d'équipes et application des normes de sécurité.</li>
+                        <li>Résolution de problèmes techniques et gestion des détails.</li>
+                        <li>Suivi efficace des projets pour un achèvement réussi.</li>
+                    </ul>
+                </div>
+                
+                
+                <!-- 3 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card3">
+                    <strong>Chargé d'affaire - Comsa</strong>
+                    <p>mai 2019 – oct 2020</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card3', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Gestion globale de projet, couvrant aspects techniques, économiques, réglementaires
+                            et qualité.</li>
+                        <li>Contrôle strict des coûts et suivi des plans d'action.</li>
+                        <li>Organisation et gestion de chantiers, incluant planification, approvisionnement et
+                            personnel.</li>
+                        <li>Autonomie et expérience en binôme pendant 8 mois, puis en autonomie pendant 10 mois.</li>
+                        <li>Livraison réussie de chantiers grâce à une expertise avérée.</li>
 
-            <div class="card--techstack">
-                <span>C, C++ & C#</span>
-            </div>
-            
-        </div>
+                    </ul>
+                </div>
 
-    </section>
+                <!-- 4 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card4">
+                    <strong>Ingénieur Etude de prix BTP/Conducteur de travaux CFO et CFA - Bouygues Energies & Services</strong>
+                    <p>avr 2018 – sep 2018</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card4', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Évaluer avec expertise les projets électriques dans le domaine du bâtiment, assurer une planification efficace.</li>
+                        <li>Effectuer le chiffrage précis des projets électriques en utilisant des méthodologies avancées pour une gestion financière optimale des projets.</li>
+                        <li>Réaliser des pré-études techniques et des mémoires techniques de haute qualité pour des projets réussis.</li>
+                        <li>Diriger la conduite des travaux sur site avec une gestion précise du planning et des dossiers techniques, tout en recherchant constamment des solutions pour l'électricité dans le BTP, et maîtriser les normes NF-C 15-100 et EN 12464.</li>
+                    </ul>
+                </div>
 
-    <!-- Compétences Techniques -->
-    <section class="section--page">
-        <h2>Connaissances Préliminaires</h2>
-        
-        <div id="wrapper--techstack__items">
-            
-            <div class="card--techstack">
-                <span>Angular</span>
-            </div>
+                <!-- 5 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card5">
+                    <strong>Assistant Ingénieur du Système BMS et HVAC - Sela PASS (KSA)</strong>
+                    <p>juin 2015 – Août 2015</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card5', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Développer des compétences informatiques solides, y compris la mise en œuvre de méthodologies de mesure et de planification.</li>
+                        <li>Acquérir de l'expérience pratique sur les sites de travaux, en contribuant activement à la mise en œuvre des systèmes BMS et HVAC.</li>
+                        <li>Suivre des formations spécialisées sur les systèmes de refroidissement, renforçant ainsi ma maîtrise de ces technologies essentielles.</li>
+                    </ul>
+                </div>                
 
-            <div class="card--techstack">
-                <span>TypeScript</span>
-            </div>
-            
-            <div class="card--techstack">
-                <span>API</span>
-            </div>
+                <!-- 6 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card6">
+                    <strong>Consultant en développement web et création de site WordPress</strong> 
+                    <p>Freelance - avr 2020 - oct 2020</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card6', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Responsable de la conception et de la mise en place du site web en utilisant la plateforme WordPress.</li>
+                        <li>Prise en charge de toutes les étapes nécessaires pour la création du site web, y compris l'achat du nom de domaine, l'hébergement du site via HostGator et la configuration du site de A à Z.</li>
+                        <li>Réalisation de la maintenance régulière du site web, en effectuant les mises à jour nécessaires, en assurant la sécurité du site et en résolvant les problèmes techniques.</li>
+                        <li>Création du logo personnalisé pour le site web tout en répondant aux besoins du client.</li>
+                        <li>Collaboration étroite avec le client afin de comprendre ses besoins et ses exigences, tout en fournissant des conseils professionnels pour améliorer sa présence en ligne.</li>
+                    </ul>
+                </div>
 
-            <div class="card--techstack">
-                <span>NodeJS</span>
-            </div>
-            
-        </div>
+                <!-- 7 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card7">
+                    <strong>Consultant en développement web et marketing</strong>
+                    <p>Freelance - oct 2017 - avr 2018</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card7', 'French');" data-version="French">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Lancement d'une boutique en ligne pour un client, en utilisant HTML, CSS et JavaScript.</li>
+                        <li>Maintenance continue du site web, en réalisant des modifications et des ajouts.</li>
+                        <li>Collaboration à une campagne publicitaire en contribuant à l'élaboration et à la mise en œuvre de stratégies marketing visant à accroître la visibilité en ligne et à générer du trafic vers la boutique.</li>
+                        <li>Création de plusieurs logos pour le site web, en proposant différentes options de design.</li>
+                        <li>Réalisation des mises à jour régulières des contenus et des images sur les sites web.</li>
+                    </ul>
+                </div>
 
-    </section>
+            </section>
 
-    <!-- Points Forts -->
-    <section class="section--page">
-        <h2>Points Forts</h2>
-        <ul id="qualification--list">
-            <li>Connaissance approfondie des langages de programmation front-end tels que<strong> HTML, CSS et JavaScript</strong></li>
-            <li>Expérience de travail avec des frameworks front-end populaires tels que <strong>Bootstrap et ReactJS</strong></li>
-            <li>Capacité à créer des interfaces utilisateurs <strong>responsives</strong> et accessibles pour différents types de périphériques et de tailles d'écran</li>
-            <li>Connaissance des langages de programmation robotiques tels qu’Arduino, <strong>, C# et C++</strong></li>
-            <li>Connaissances préliminaires en <strong>Python, TypeScript, Angular, API et NodeJS</strong> avec une volonté d'apprentissage continu</li>
-        </ul>
-    </section>
+        </section>
 
 
-    <!-- Experiences Professionnelles -->
-    <h2>Expériences Professionnelles</h2>
+        <!-- Formations -->
 
-    <!--check box-->
-    <section id="checkbox-experiences">
-        <label>
-            <input type="checkbox" id="webDevCheckbox" name="experience" value="web">
-            Expériences en Developpement Web
-        </label>
-        <label>
-            <input type="checkbox" id="industrialCheckbox" name="experience" value="industrial">
-            Expériences dans l'industrie
-        </label>
-    </section>
+        <h2 id="formations-section">Formations</h2>
 
-    <section id="work-history-wrapper" class="section--page">
+        <section class="section--page">
 
-        <section id="webDevelopmentExp">
             <!-- 1 -->
             <div class="line-break"></div>
             <div class="card--work-history" >
-                <strong>Consultant en développement web et création de site WordPress</strong> 
-                <p>Freelance - avr 2020 - oct 2020</p>
-                <ul>
-                    <li>Responsable de la conception et de la mise en place du site web en utilisant la plateforme WordPress.</li>
-                    <li>Prise en charge de toutes les étapes nécessaires pour la création du site web, y compris l'achat du nom de domaine, l'hébergement du site via HostGator et la configuration du site de A à Z.</li>
-                    <li>Réalisation de la maintenance régulière du site web, en effectuant les mises à jour nécessaires, en assurant la sécurité du site et en résolvant les problèmes techniques.</li>
-                    <li>Création du logo personnalisé pour le site web tout en répondant aux besoins du client.</li>
-                    <li>Collaboration étroite avec le client afin de comprendre ses besoins et ses exigences, tout en fournissant des conseils professionnels pour améliorer sa présence en ligne.</li>
-                </ul>
+                <strong>Certificat Professionnelle - Développement Front End</strong> 
+                <p>Meta - avril 2023 - août 2023</p>
+
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Front End certificate.pdf" target="_blank">Certificat</a>
+                </button>
             </div>
+
+            <!-- Modal for "Certificat en cours"
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Ce cours n'est pas encore terminé. Le certificat sera disponible une fois qu'il sera terminé.</p>
+                </div>
+            </div> -->
 
             <!-- 2 -->
             <div class="line-break"></div>
             <div class="card--work-history">
-                <strong>Consultant en développement web et marketing</strong>
-                <p>Freelance - oct 2017 - avr 2018</p>
-                <ul>
-                    <li>Lancement d'une boutique en ligne pour un client, en utilisant HTML, CSS et JavaScript.</li>
-                    <li>Maintenance continue du site web, en réalisant des modifications et des ajouts.</li>
-                    <li>Collaboration à une campagne publicitaire en contribuant à l'élaboration et à la mise en œuvre de stratégies marketing visant à accroître la visibilité en ligne et à générer du trafic vers la boutique.</li>
-                    <li>Création de plusieurs logos pour le site web, en proposant différentes options de design.</li>
-                    <li>Réalisation des mises à jour régulières des contenus et des images sur les sites web.</li>
-                </ul>
+                <strong>Master - Système d'Énergie Électrique - Automatique et Informatique Industrielle</strong>
+                <p>ENSEEIHT - 2016 - 2018</p>
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Master.pdf" target="_blank">Certificat</a>
+                </button>
             </div>
-        </section>
-
-        
-        <section id="industrialExp" class="hidden">
 
             <!-- 3 -->
             <div class="line-break"></div>
             <div class="card--work-history">
-                <strong>Chef de Projet - ALFA LAVAL</strong>
-                <p>fev 2022 - Présent</p>
-                <ul>
-                    <li>Gestion de projets variés.</li>
-                    <li>Suivi complet et efficace des projets de bout en bout.</li>
-                    <li>Collaboration étroite avec les équipes d'usines internationales.</li>
-                    <li>Expertise en réglementations et normes industrielles.</li>
-                    <li>Supervision de budgets dépassant 20 millions d'euros.</li>
-                    <li>Formation de nouveaux employés pour renforcer l'équipe.</li>
-                </ul>
+                <strong>Licence - Génie Mécatronique</strong>
+                <p>Balamand - 2013 - 2016</p>
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Balamand.pdf" target="_blank">Certificat</a>
+                </button>
             </div>
-            
 
-            <!-- 4 -->
-            <div class="line-break"></div>
-            <div class="card--work-history">
-                <strong>Responsable des travaux - Equans</strong>
-                <p>dec 2020 – dec 2021</p>
-                <ul>
-                    <li>Formation de nouveaux employés pour renforcer l'équipe.</li>
-                    <li>Conception et planification précises.</li>
-                    <li>Coordination d'équipes et application des normes de sécurité.</li>
-                    <li>Résolution de problèmes techniques et gestion des détails.</li>
-                    <li>Suivi efficace des projets pour un achèvement réussi.</li>
-                </ul>
-            </div>
-            
-            
-            <!-- 5 -->
-            <div class="line-break"></div>
-            <div class="card--work-history">
-                <strong>Chargé d'affaire - Comsa</strong>
-                <p>mai 2019 – oct 2020</p>
-                <ul>
-                    <li>Gestion globale de projet, couvrant aspects techniques, économiques, réglementaires
-                        et qualité.</li>
-                    <li>Contrôle strict des coûts et suivi des plans d'action.</li>
-                    <li>Organisation et gestion de chantiers, incluant planification, approvisionnement et
-                        personnel.</li>
-                    <li>Autonomie et expérience en binôme pendant 8 mois, puis en autonomie pendant 10 mois.</li>
-                    <li>Livraison réussie de chantiers grâce à une expertise avérée.</li>
+        </section>  
+    </div>   
+</div>
 
-                </ul>
+<div class="english-content">
+
+    <div class="nav-bar">
+        <nav>
+            <ul>
+              <li><a href="#wrapper--hero2">Bio</a></li>
+              <li><a href="#competences-techniques2">Skills</a></li>
+              <li><a href="#points-forts2">Points (+)</a></li>
+              <li><a href="#Experiences-section2">Experiences</a></li>
+              <li><a href="#formations-section2">Educations</a></li>
+            </ul>
+        </nav>   
+    </div>
+
+    <div id="container--main">
+    
+        <!-- Bio -->
+        <section id="wrapper--hero2" class="section--page">
+            <img id="profile-pic" src="./assets/images/photoID.png" alt="ID photo">
+
+            <div>
+
+                <div class="namenswitch">
+                    <h1 id="user-name">Ahmad EL ALI</h1>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" class="switch">
+                    <div class="powersign"></div>
+                    </label>
+                </div>
+                <h2>Project Manager</h2>
+                <p id="bio">
+                    <i>With 5+ years of professional experience, I am committed to
+                        using my project management, strategic planning, and
+                        interpersonal skills to contribute to the success of your projects.
+                        My medium-term goal is to take on the responsibility of a
+                        division, while continuing to add value to your company.</i>
+                </p>
+                <p id="email">e-mail: elali.ahm@gmail.com</p>
+                <p id="phone">Phone: +33 7 84 96 80 06</p>
+
             </div>
         </section>
 
-    </section>
 
-
-    <!-- Formations -->
-
-    <h2>Formations</h2>
-
-    <section class="section--page">
-
-        <!-- 1 -->
-        <div class="line-break"></div>
-        <div class="card--work-history" >
-            <strong>Certificat Professionnelle - Développement Front End</strong> 
-            <p>Meta - avril 2023 - août 2023</p>
-
-            <button class="show-courses">Voir les Cours</button>
-            <ul class="courses-list hidden-courses">
-                <h4>Specialisation: Développement Front-End <a href="assets/certificates/Front End certificate.pdf" target="_blank">Télécharger le Certificat</a></h4>
-                <li>Introduction au Développement Front-End <a href="assets/certificates/introduction to Front End Dev.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>Introduction au Développement Back-End <a href="assets/certificates/introduction to Back End Dev.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>HTML and CSS en profondeur <a href="assets/certificates/HTML & CSS.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>Programmation avec JavaScript <a href="assets/certificates/JavaScript.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>Base de React <a href="assets/certificates/React Basics.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>React avancé <a href="assets/certificates/Advanced React.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>Version Control – GIT <a href="assets/certificates/version control.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>Principes de conception UX/UI <a href="assets/certificates/UX-UI design.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>APIs <a href="assets/certificates/API.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <li>AngularJS pour débutant <a href="assets/certificates/AngularJS.pdf" target="_blank">Télécharger le Certificat</a></li>
-                <!-- <li>Autre certificat <a href=# target="_blank">Certificat en cours</a></li> -->
-            </ul>
-
-        </div>
-
-        <!-- Modal for "Certificat en cours" -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Ce cours n'est pas encore terminé. Le certificat sera disponible une fois qu'il sera terminé.</p>
+        <!-- liens -->
+        <section id="liens" class="section--page">
+            <div id="socials--list">
+                <!-- <strong><a href="https://www.github.com/ELALI-Ahmad" target="_blank">Github</a></strong> -->
+                <strong><a href="https://www.linkedin.com/in/ahmad-el-ali/" target="_blank">linkedin</a></strong>
+                <!-- <strong><a href="./assets/CV Ahmad EL ALI Fr.pdf" target="_blank">Download CV</a></strong> -->
+                <!-- <strong><a href="./assets/CV Ahmad EL ALI Eng.pdf" target="_blank">linkedin</a></strong> -->
+                <strong>
+                    <a href="#" id="downloadLink" onclick="showLanguageButtons();">Download CV</a>
+                    <div id="languageButtons" style="display: none;">
+                    <button class="simple-btn" onclick="downloadCV('French')">CV Français</button>
+                    <button class="simple-btn" onclick="downloadCV('English')">English CV</button>
+                    </div>
+                </strong>
             </div>
-        </div>
+        </section>
 
-        <!-- 2 -->
-        <div class="line-break"></div>
-        <div class="card--work-history">
-            <strong>Master - Système d'Énergie Électrique - Automatique et Informatique Industrielle</strong>
-            <p>ENSEEIHT - 2016 - 2018</p>
-        </div>
 
-        <!-- 3 -->
-        <div class="line-break"></div>
-        <div class="card--work-history">
-            <strong>Licence - Génie Mécatronique</strong>
-            <p>Balamand - 2013 - 2016</p>
-        </div>
+        <!-- Compétences -->
+        <section id="competences-techniques2" class="section--page">
+            <h2>Skills</h2>
+            
+            <div id="wrapper--techstack__items">
+                
+                <div class="card--techstack">
+                    <span>Strategic Planning</span>
+                </div>
+                
+                <div class="card--techstack">
+                <span>Team Management</span>
+                </div>
+                
+                <div class="card--techstack">
+                <span>Monitoring and Control</span>
+                </div>
+                
+                <div class="card--techstack">
+                <span>Risk Management</span>
+                </div>
+                
+                <div class="card--techstack">
+                <span>Communication</span>
+                </div>
+                
+                <div class="card--techstack">
+                <span>Budget Management</span>
+                </div>
+                
+            </div>
 
-    </section>
+        </section>
 
-        <!-- Projets -->
-    <section class="section--page">
-        <h2>Projets</h2>
-        <div class="cards">
-            <a href="https://elali-ahmad.github.io/Project-1/" target="_blank" class="flip-card"> <!-- Project 1 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Y-Cloud</h3>
-                        <h4>HTML & CSS</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">Site web d'un serveur</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+        <!-- Points Forts -->
+        <section id="points-forts2" class="section--page">
+            <h2>Strong Points</h2>
+            <ul id="qualification--list">
+                <li>Ability to manage and <strong>coordinate teams</strong> to achieve specific goals.</li>
+                <li><strong>Communication</strong> skills to collaborate with crossfunctional teams.</li>
+                <li>Ability to <strong>assess risks</strong> and develop action plans to manage them effectively.</li>
+                <li>Ability to <strong>manage budgets</strong> and track project costs.</li>
+                <li>Ability to develop growth strategies and implement <strong>execution plans.</strong></li>
+                <li>Expert management of <strong>customer invoicing</strong>, ensuring accuracy and efficient tracking of payments.</li>
+            </ul>
+        </section>
+
+
+        <!-- Experiences -->
+        <h2 id="Experiences-section2">Experiences</h2>
+
+        <section id="work-history-wrapper" class="section--page">
+
+            
+            <section id="industrialExp">
+
+                <!-- 1 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card8">
+                    <strong>Project Manager</strong>
+                    <p>ALFA LAVAL - France</p>
+                    <p>Feb 2022 – Present</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card8', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Manage heat exchanger maintenance projects for over 40 clients.</li>
+                        <li>Monitor end-to-end projects and client invoicing.</li>
+                        <li>Collaborate closely with international factory teams.</li>
+                        <li>Have expertise in industry regulations and standards.</li>
+                        <li>Oversee budgets exceeding 20 million euros for EDF.</li>
+                        <li>Train new employees to strengthen the team.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://elali-ahmad.github.io/Project-2/" target="_blank" class="flip-card"> <!-- Project 2 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Consultant Agency</h3>
-                        <h4>HTML & CSS</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">Site d'un agence de Consulting</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+
+                <!-- 2 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card9">
+                    <strong>Work Manager</strong>
+                    <p>EQUANS - France</p>
+                    <p>Dec 2020 – Dec 2021</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card9', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Manage complex projects in the installation of antennas for GRDF with a team of two people.</li>
+                        <li>Design and plan precisely.</li>
+                        <li>Coordinate teams and apply safety standards.</li>
+                        <li>Resolve technical issues and manage details.</li>
+                        <li>Monitor projects for successful completion.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://elali-ahmad.github.io/Project-3/" target="_blank" class="flip-card"> <!-- Project 3 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Book List</h3>
-                        <h4>HTML, CSS & JavaScript + Bootstrap</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">Ajouter, sauvegarder et supprimer des livres</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+
+                <!-- 3 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card10">
+                    <strong>Responsible business</strong>
+                    <p>COMSA - France</p>
+                    <p>May 2019 – Oct 2020</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card10', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Electrical installation projects at CERN, covering technical, economic, regulatory, and quality aspects.</li>
+                        <li>Strictly control costs and follow action plans.</li>
+                        <li>Organize and manage construction sites, including planning, procurement, and personnel (managed a team of 10 to 30 people).</li>
+                        <li>Work independently and in pairs for 8 months, then independently for 10 months.</li>
+                        <li>Successfully deliver projects thanks to proven expertise.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://elali-ahmad.github.io/Project-4/" target="_blank" class="flip-card"> <!-- Project 4 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Filter</h3>
-                        <h4>HTML, CSS & JavaScript + Bootstrap</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">Trier des objets ajoutés</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+
+                <!-- 4 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card11">
+                    <strong>Construction price study engineer/Works manager CFO and CFA</strong>
+                    <p>Bouygues Energies & Services - France</p>
+                    <p>Apr 2018 – Sep 2018</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card11', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Expertly evaluate electrical projects in the building sector, ensure effective planning.</li>
+                        <li>Carry out precise costing of electrical projects using advanced methodologies for optimal financial management of projects.</li>
+                        <li>Carry out high-quality technical pre-studies and technical briefs for successful projects.</li>
+                        <li>Direct the conduct of work on site with precise management of planning and technical files, while constantly seeking innovative solutions for electricity in construction, and master the NF-C 15-100 and EN 12464 standards.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://elali-ahmad.github.io/Project-5/" target="_blank" class="flip-card"> <!-- Project 5 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Panier</h3>
-                        <h4>React JS</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">Ajouter et supprimer des articles dans un panier</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+
+                <!-- 5 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card12">
+                    <strong>Assistant BMS and HVAC System Engineer</strong>
+                    <p>Sela PASS - KSA</p>
+                    <p>June 2015 – Aug 2015</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card12', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <li>Develop strong IT skills, including the implementation of measurement and planning methodologies.</li>
+                        <li>Gain practical experience on work sites, actively contributing to the implementation of BMS and HVAC systems.</li>
+                        <li>Complete specialized training on cooling systems, thereby strengthening mastery of these essential technologies.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://elali-ahmad.github.io/Little-Lemon-Reservation/" target="_blank" class="flip-card"> <!-- Project 6 -->
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3 class="title">Restaurant Reservation</h3>
-                        <h4>React JS</h4>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3 class="title">React Reservation From</h3>
-                        <h4>Cliquez pour accéder au site</h4>
-                    </div>
+
+                <!-- 6 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card13">
+                    <strong>Front-End Developer</strong>
+                    <p>Freelance - France</p>
+                    <p>2020</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card13', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <span class="consultant-title">Consultant in web development and WordPress site creation</span>
+                        <li>Responsible for the design, configuration, and complete maintenance of websites.</li>
+                        <li>Worked with clients to meet their needs and create custom logos.</li>
+                    </ul>
                 </div>
-            </a>
-        </div>
+
+                <!-- 7 -->
+                <div class="line-break"></div>
+                <div class="card--work-history" id="card14">
+                    <strong>Front-End Developer</strong>
+                    <p>Freelance - France</p>
+                    <p>2017</p>
+                    <button class="show-more-btn learn-more" onclick="toggleLearnMore('card14', 'English');" data-version="English">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Learn More</span>
+                    </button>
+                    <ul class="hidden">
+                        <span class="consultant-title">Consultant in web development and marketing</span>
+                        <li>Launched an online store for a client, using HTML, CSS, and JavaScript.</li>
+                        <li>Continuously maintained the website, making modifications and additions.</li>
+                        <li>Contributed to an advertising campaign by helping develop and implement marketing strategies to increase online visibility and generate traffic to the store.</li>
+                        <li>Designed multiple logos for the website, offering different design options.</li>
+                        <li>Performed regular content and image updates.</li>
+                    </ul>
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+        <!-- Formations -->
+
+        <h2 id="formations-section2">Education</h2>
+
+        <section class="section--page">
+
+            <!-- 1 -->
+            <div class="line-break"></div>
+            <div class="card--work-history" >
+                <strong>Professional Certificat - Front End development</strong> 
+                <p>Meta - april 2023 - August 2023</p>
+
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Front End certificate.pdf" target="_blank">Certificat</a>
+                </button>
+            </div>
+
+            <!-- Modal for "Certificat en cours"
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Ce cours n'est pas encore terminé. Le certificat sera disponible une fois qu'il sera terminé.</p>
+                </div>
+            </div> -->
+
+            <!-- 2 -->
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>Master - Electrical Energy System - Automation and industial computing</strong>
+                <p>ENSEEIHT - 2016 - 2018</p>
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Master.pdf" target="_blank">Certificat</a>
+                </button>
+            </div>
+
+            <!-- 3 -->
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>Bachelor of Technology - Méchatronics Engineering</strong>
+                <p>Balamand - 2013 - 2016</p>
+                <button class="cert-btn">
+                    <a href="./assets/certificates/Balamand.pdf" target="_blank">Certificat</a>
+                </button>
+            </div>
+
+        </section>  
+    </div>   
 </div>
-       
-
-    </section>
-
 </div>
 
 <script src="action.js"></script>
